@@ -1,0 +1,469 @@
+// Property In RTL
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+
+  body[dir=rtl] & {
+    #{$property}: $rtl-value;
+  }
+}
+
+// Flex
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// Font
+@mixin font($weight, $size, $color: var(--theme_text_clr)) {
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+// Size
+@mixin size($width, $height: auto) {
+  inline-size: $width;
+  block-size: $height;
+}
+
+@mixin lines($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin boxSizing {
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin transitioning($t) {
+  -moz-transition: all $t ease-in-out;
+  -webkit-transition: all $t ease-in-out;
+  -o-transition: all $t ease-in-out;
+  transition: all $t ease-in-out;
+}
+
+@mixin colorTransitioning($ct) {
+  -moz-transition: background $ct linear, color $ct linear;
+  -webkit-transition: background $ct linear, color $ct linear;
+  -o-transition: background $ct linear, color $ct linear;
+  transition: background $ct linear, color $ct linear;
+}
+
+@mixin borderRadius($br) {
+  -moz-border-radius: $br;
+  -webkit-border-radius: $br;
+  -o-border-radius: $br;
+  border-radius: $br;
+}
+
+@mixin customBorderRadius($tl, $tr, $br, $bl) {
+  -moz-border-radius: $tl $tr $br $bl;
+  -o-border-radius: $tl $tr $br $bl;
+  -webkit-border-radius: $tl $tr $br $bl;
+  border-radius: $tl $tr $br $bl;
+}
+
+@mixin menuHoverEffect {
+  overflow: hidden;
+  margin: 0 10px;
+  position: relative;
+  font-size: 15px;
+
+  button,
+  a {
+    text-decoration: none;
+    color: var(--dark_gray_clr);
+    @include transitioning(0.2s);
+    font-family: $bold_font;
+
+    &.router-link-exact-active {
+      color: var(--secondary_theme_clr);
+    }
+  }
+
+  &:hover {
+
+    button,
+    a {
+      color: var(--secondary_theme_clr);
+    }
+  }
+}
+
+@mixin primaryBtnStyle {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 15px;
+  color: var(--white_clr);
+  border-radius: 5px;
+  border: 1px solid var(--main_theme_clr);
+  background-image: linear-gradient(90deg, transparent 50%, var(--main_theme_clr) 50%);
+  background-position: 100%;
+  background-size: 400%;
+  @include transitioning(0.6s);
+
+  @include media(sm) {
+    font-size: .9rem;
+  }
+
+  .btn_loader {
+    position: absolute;
+    left: 10px;
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border: 3px dotted var(--white_clr);
+    border-style: solid solid dotted dotted;
+    @include borderRadius(50%);
+    @include transitioning(0.4s);
+    display: inline-block;
+    animation: rotation 2s linear infinite;
+  }
+
+  &:hover {
+    background-position: 0;
+    color: var(--main_theme_clr);
+    border: 1px solid var(--main_theme_clr);
+    background-color: transparent;
+
+    .btn_loader {
+      border: 3px dotted var(--main_theme_clr);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin discardButtonStyle {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 15px;
+  color: var(--white_clr);
+  border-radius: 5px;
+  border: 1px solid var(--deactive_button_clr);
+  background-image: linear-gradient(90deg, transparent 50%, var(--deactive_button_clr) 50%);
+  background-position: 100%;
+  background-size: 400%;
+  @include transitioning(0.6s);
+
+  @include media(sm) {
+    font-size: .9rem;
+  }
+
+  .btn_loader {
+    position: absolute;
+    left: 10px;
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border: 3px dotted var(--white_clr);
+    border-style: solid solid dotted dotted;
+    @include borderRadius(50%);
+    @include transitioning(0.4s);
+    display: inline-block;
+    animation: rotation 2s linear infinite;
+  }
+
+  &:hover {
+    background-position: 0;
+    color: var(--deactive_button_clr);
+    border: 1px solid var(--deactive_button_clr);
+    background-color: transparent;
+
+    .btn_loader {
+      border: 3px dotted var(--deactive_button_clr);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin secondaryBtnStyle {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  min-width: 130px;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--white_clr);
+  border-radius: 10px;
+  border: 1px solid var(--secondary_theme_clr);
+  background-image: linear-gradient(90deg, transparent 50%, var(--secondary_theme_clr) 50%);
+  background-position: 100%;
+  background-size: 400%;
+  @include transitioning(0.6s);
+
+  @include media(sm) {
+    font-size: .9rem;
+  }
+
+  .btn_loader {
+    position: absolute;
+    left: 15px;
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border: 3px dotted var(--white_clr);
+    border-style: solid solid dotted dotted;
+    @include borderRadius(50%);
+    @include transitioning(0.4s);
+    display: inline-block;
+    animation: rotation 2s linear infinite;
+  }
+
+  &:hover {
+    background-position: 0;
+    color: var(--secondary_theme_clr);
+    border: 1px solid var(--secondary_theme_clr);
+    background-color: transparent;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin borderedBtnStyle {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  min-width: 130px;
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 16px;
+  color: var(--theme_text_clr);
+  border-radius: 5px;
+  border: 1px solid var(--border_clr);
+  @include transitioning(0.6s);
+
+  @include media(sm) {
+    font-size: .9rem;
+  }
+
+  .btn_loader {
+    position: absolute;
+    left: 15px;
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border: 3px dotted var(--white_clr);
+    border-style: solid solid dotted dotted;
+    @include borderRadius(50%);
+    @include transitioning(0.4s);
+    display: inline-block;
+    animation: rotation 2s linear infinite;
+  }
+
+  &:hover {
+    color: var(--main_theme_clr);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin softBtnStyle($s_bg) {
+  width: 40px;
+  height: 40px;
+  @include flexCenterAlignment;
+  background-color: $s_bg;
+  color: var(--main_theme_clr);
+  @include borderRadius(10px);
+
+  i,
+  svg {
+    font-size: 20px;
+  }
+}
+
+@mixin wishlistBtnStyle() {
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--main_theme_clr);
+  border-radius: 4px;
+  @include flexCenterAlignment;
+
+  i,
+  svg {
+    color: var(--main_theme_clr);
+    font-size: 22px;
+  }
+}
+
+@mixin mainTitleStyle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: $bold_font;
+  color: var(--theme_text_clr);
+  text-transform: capitalize;
+}
+
+@mixin flexCenterAlignment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexStartAlignment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin verticalFlexStartAlignment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flexSpaceBetweenAlignment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexSpaceAroundAlignment {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flexEndAlignment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin textWrapper {
+  word-break: break-word;
+  word-spacing: 2px;
+  font-size: 15px;
+  color: var(--mid_gray_clr);
+  line-height: 1.8;
+  text-align: start;
+}
+
+@mixin textEllipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin simpleShadow {
+  box-shadow: 0 0 10px 2px var(--simple_shadow_clr);
+}
+
+@mixin midShadow {
+  box-shadow: 0 0 6px 0 var(--mid_shadow_clr);
+}
+
+@mixin heighShadow {
+  box-shadow: 0 0 10px 0 rgba(180, 180, 180, 0.6);
+}
+
+// media queries
+@mixin media($point) {
+  @if $point==xs {
+    @media (max-width:575px) {
+      @content;
+    }
+  }
+
+  @else if $point==sm {
+    @media (max-width:767px) {
+      @content;
+    }
+  }
+
+  @else if $point==main {
+    @media (min-width:768px) {
+      @content;
+    }
+  }
+
+
+  @else if $point==md {
+    @media (max-width:991px) {
+      @content;
+    }
+  }
+
+  @else if $point==lg {
+    @media (max-width:1224px) {
+      @content;
+    }
+  }
+
+  @else if $point==xl {
+    @media (min-width:1200px) {
+      @content;
+    }
+  }
+}
