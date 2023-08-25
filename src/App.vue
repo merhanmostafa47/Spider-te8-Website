@@ -1,37 +1,22 @@
-<script>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/helloworld.vue'
+<script setup>
+import { ref } from 'vue'
 import TheNavbar from './components/navigation/TheNavbar.vue'
 
-export default {
-  components: {
-    HelloWorld,
-    TheNavbar,
-  },
+import { useLocale } from 'vuetify'
+const { current } = useLocale()
 
-  created() {
-    const locale = localStorage.getItem('locale')
-
-    if (locale) {
-      this.$i18n.locale = locale
-    } else if (navigator.language) {
-      this.$i18n.locale = navigator.language.substring(0, 2)
-    }
-  },
+const locale =
+  localStorage.getItem('locale') || navigator.language.substring(0, 2)
+const i18n = {
+  locale: ref(locale),
 }
+current.value = i18n.locale.value
+document.dir = locale === 'en' ? 'ltr' : 'rtl'
 </script>
 
 <template>
   <header>
     <TheNavbar />
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
   </header>
 
   <RouterView />

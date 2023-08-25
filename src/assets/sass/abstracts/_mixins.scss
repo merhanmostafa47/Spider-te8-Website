@@ -417,15 +417,15 @@
 }
 
 @mixin simpleShadow {
-  box-shadow: 0 0 10px 2px var(--simple_shadow_clr);
+  box-shadow:  0px 1px 64px 0px  var(--simple_shadow_clr);
 }
 
 @mixin midShadow {
-  box-shadow: 0 0 6px 0 var(--mid_shadow_clr);
+  box-shadow: 0px -4px 150px 0px var(--mid_shadow_clr);
 }
 
 @mixin heighShadow {
-  box-shadow: 0 0 10px 0 rgba(180, 180, 180, 0.6);
+  box-shadow: 0px 2px 150px 0px var(--heigh_shadow_clr);
 }
 
 // media queries
