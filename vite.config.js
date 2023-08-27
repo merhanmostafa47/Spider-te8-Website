@@ -8,21 +8,23 @@ import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+
   plugins: [
     vue(),
     ViteGlobalStyle({
-      globalStyle: "./src/assets/sass/main.scss",
+      globalStyle: "./src/assets/sass/components/navigation/theNavbar.scss",
     }),
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
       strictMessage: false
     }),
   ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-    },
-  },
+
   css: {
     preprocessorOptions: {
       scss: {

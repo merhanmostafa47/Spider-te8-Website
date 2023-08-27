@@ -1,3 +1,11 @@
 {
-    "homePage":"home Page"
+    "NAV":{
+        "home":"Home",
+        "about":"About",
+        "services":"Services",
+        "ourWork":"Our Work",
+        "store":"Store",
+        "blog":"Blog",
+        "contactUs":"Contact Us"
+    }
 }

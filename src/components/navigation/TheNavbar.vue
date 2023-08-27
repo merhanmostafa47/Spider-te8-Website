@@ -3,25 +3,26 @@
     <v-container>
       <v-row justify="space-between" align="center">
         <div class="logo">
-          <img src="../../assets/images/logo.svg" alt="" />
+          <img src="../../assets/images/logo/logo.svg" alt="" />
         </div>
         <ul class="nav_list">
           <li class="nav_item" v-for="(item, i) in navList" :key="i">
-            <router-link :to="item.to">{{ item.title }}</router-link>
+            <router-link :to="item.to" class="nav_link">{{ item.title }}</router-link>
           </li>
         </ul>
+        <router-link to="/contact" class="primary-btn">
+          {{$t('NAV.contactUs')}}
+        </router-link>
       </v-row>
     </v-container>
   </nav>
 
-  <button @click="setLocale('en')">EN</button>
-  <button @click="setLocale('ar')">AR</button>
+  <button>EN</button>
+  <button>AR</button>
 </template>
 
 <script setup>
 import { reactive } from 'vue'
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
 
 const navList = reactive([
   {
@@ -37,36 +38,40 @@ const navList = reactive([
     to: '/services',
   },
   {
-    title: 'Projects',
+    title: 'Our Work',
     to: '/projects',
   },
   {
-    title: 'Store',
+    title:'Store',
     to: '/store',
   },
+  {
+    title:'blog',
+    to: '/blog',
+  },
 ])
-
-const setLocale = (locale) => {
-  localStorage.setItem('locale', locale)
-  t.locale = locale 
-}
 </script>
-
 <style lang="scss" scoped>
-.navbar_wrapper {
-  .logo {
-    @include size(8rem, auto);
-    img {
-      max-inline-size: 100%;
-    }
-  }
+.navbar_wrapper{
+    padding-block: 1rem;
+    .logo {
+        @include size(9rem, auto);
+        img {
+          max-inline-size: 100%;
+        }
+      }
 
-  .nav_list {
-    @include flex(center, center, row);
-    gap: 1.5rem;
-  }
-}
-button {
-  margin-inline: 1rem;
+      .nav_list {
+        @include flex(center, center, row);
+        gap: 1.5rem;
+
+        .nav_item{
+          .nav_link{
+            text-decoration: none;
+            @include font(500,1.25rem,$main_theme_clr);
+          }
+        }
+      }
+    
 }
 </style>

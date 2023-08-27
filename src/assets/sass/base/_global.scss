@@ -22,9 +22,10 @@
   }
 }
 
-.primary-btn-style {
+.primary-btn {
   @include primaryBtnStyle;
 }
+
 
 // input:-webkit-autofill,
 // input:-webkit-autofill:focus {

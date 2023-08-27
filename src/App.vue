@@ -1,17 +1,24 @@
 <script setup>
-import { ref } from 'vue'
+import { ref ,onUpdated} from 'vue'
 import TheNavbar from './components/navigation/TheNavbar.vue'
 
-import { useLocale } from 'vuetify'
-const { current } = useLocale()
+import { useLocaleStore } from './stores/localeStore';
+const locale = useLocaleStore();
+locale.getlocale();
 
-const locale =
-  localStorage.getItem('locale') || navigator.language.substring(0, 2)
-const i18n = {
-  locale: ref(locale),
-}
-current.value = i18n.locale.value
-document.dir = locale === 'en' ? 'ltr' : 'rtl'
+// import { useLocale } from 'vuetify'
+// const { current } = useLocale()
+
+// const locale =
+//   localStorage.getItem('locale') || navigator.language.substring(0, 2)
+// const i18n = {
+//   locale: ref(locale),
+// };
+
+// onMounted(() => {
+//   current.value = i18n.locale.value
+//   document.dir = localStorage.getItem('dir');
+// })
 </script>
 
 <template>

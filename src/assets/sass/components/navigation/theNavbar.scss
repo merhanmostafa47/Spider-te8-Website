@@ -1,0 +1,21 @@
+.navbar_wrapper{
+  padding-block: 1rem;
+  .logo {
+      @include size(9rem, auto);
+      img {
+        max-inline-size: 100%;
+      }
+    }
+
+    .nav_list {
+      @include flex(center, center, row);
+      gap: 1.5rem;
+
+      .nav_item{
+        .nav_link{
+          text-decoration: none;
+          @include font(500,1.25rem,$main_theme_clr);
+        }
+      }
+    }
+}

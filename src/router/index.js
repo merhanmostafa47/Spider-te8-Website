@@ -23,7 +23,7 @@ const routes = [
     name: 'AboutPage',
     component: () => import('../views/AboutView.vue'),
     meta: {
-      title: 'Home Page | spider-te8',
+      title: 'About Page | spider-te8',
       metaTags: [
         {
           name: 'description',
@@ -32,6 +32,96 @@ const routes = [
         {
           property: 'og:description',
           content: 'Home page of our spider-te8 App.',
+        },
+      ],
+    },
+  },
+  {
+    path: '/services',
+    name: 'ServicesPage',
+    component: () => import('../views/AboutView.vue'),
+    meta: {
+      title: 'Services Page | spider-te8',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Services Page of our spider-te8 App.',
+        },
+        {
+          property: 'og:description',
+          content: 'Services Page of our spider-te8 App.',
+        },
+      ],
+    },
+  },
+  {
+    path: '/projects',
+    name: 'ProjectsPage',
+    component: () => import('../views/AboutView.vue'),
+    meta: {
+      title: 'Projects Page | spider-te8',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Projects Page of our spider-te8 App.',
+        },
+        {
+          property: 'og:description',
+          content: 'Projects Page of our spider-te8 App.',
+        },
+      ],
+    },
+  },
+  {
+    path: '/blog',
+    name: 'BlogPage',
+    component: () => import('../views/AboutView.vue'),
+    meta: {
+      title: 'Blog  Page | spider-te8',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Blog Page of our spider-te8 App.',
+        },
+        {
+          property: 'og:description',
+          content: 'Blog  Page of our spider-te8 App.',
+        },
+      ],
+    },
+  },
+  {
+    path: '/store',
+    name: 'StorePage',
+    component: () => import('../views/AboutView.vue'),
+    meta: {
+      title: 'Store Page | spider-te8',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Store Page of our spider-te8 App.',
+        },
+        {
+          property: 'og:description',
+          content: 'Store Page of our spider-te8 App.',
+        },
+      ],
+    },
+  },
+  {
+    path: '/contact',
+    name: 'ContactPage',
+    component: () => import('../views/AboutView.vue'),
+    meta: {
+      title: 'Contact Page | spider-te8',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Contact Page of our spider-te8 App.',
+        },
+        {
+          property: 'og:description',
+          content: 'Contact Page of our spider-te8 App.',
         },
       ],
     },
