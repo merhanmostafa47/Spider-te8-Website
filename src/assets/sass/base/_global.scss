@@ -2,7 +2,6 @@
   font-family: $regular_font;
   @include boxSizing;
   margin: 0;
-  padding: 0;
   line-height: 1.8;
   list-style: none;
 
@@ -22,309 +21,27 @@
   }
 }
 
-.primary-btn {
-  @include primaryBtnStyle;
+.bg-main-color {
+  background-color: $main_theme_clr !important;
+  color: #FFFFFF !important;
 }
 
-
-// input:-webkit-autofill,
-// input:-webkit-autofill:focus {
-//     transition: background-color 100000000s 0s, color 100000000s 0s;
-// }
-
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover,
-// input:-webkit-autofill:focus,
-// input:-webkit-autofill:active {
-//     -moz-box-shadow: 0 0 0 30px rgba(0,0,0, 0) inset !important;
-//     -o-box-shadow: 0 0 0 30px rgba(0,0,0, 0) inset !important;
-//     -webkit-box-shadow: 0 0 0 30px rgba(0,0,0, 0) inset !important;
-//     box-shadow: 0 0 0 30px rgba(0,0,0, 0) inset !important;
-// }
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+// Start:: Global Buttons Classes
+.primaryBtn {
+  @include mainBtn($main_theme_clr)
 }
 
-input[type='number'] {
-  -moz-appearance: textfield;
-  appearance: textfield;
+.secondaryBtn {
+  @include mainBtn($secondary_theme_clr)
 }
 
-.iziToast-wrapper {
-  .iziToast-capsule {
-    .iziToast {
-      padding-block: 12px;
-      // background: #ebebeb;
-      // border-color: #ebebeb;
-      border-radius: 12px;
-      overflow: hidden;
-
-      &.custom_error {
-        box-shadow: inset 0 -10px 20px -10px rgb(255 0 0 / 20%),
-          inset 0 0 5px rgb(199 0 0 / 10%);
-      }
-    }
-  }
+// Start:: Global Alignment Classes
+.alignStart {
+  @include flexStartAlignment
 }
 
-// Start:: Ant Design Components Global Styling
-.ant-notification {
-  span {
-    .ant-notification-notice {
-      margin-block: 5px;
-      padding: 10px 10px;
-      border-radius: 6px;
-
-      .ant-notification-notice-content {
-        .ant-notification-notice-with-icon {
-          .ant-notification-notice-icon {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-
-          .ant-notification-notice-message {
-            margin-inline-start: 48px;
-            margin-bottom: 0;
-            font-size: 15px;
-          }
-        }
-      }
-
-      .ant-notification-notice-close {
-        top: 5px;
-        right: 12px;
-      }
-
-      &.error_toast {
-        background: var(--soft_red_clr);
-        border: 1px solid var(--mid_red_clr);
-        box-shadow: 0 0 12px rgba(255, 87, 87, 0.233);
-
-        .ant-notification-notice-content {
-          .ant-notification-notice-with-icon {
-            .ant-notification-notice-icon {
-              color: var(--mid_red_clr);
-            }
-
-            .ant-notification-notice-message {
-              color: var(--mid_red_clr);
-            }
-          }
-        }
-      }
-
-      &.success_toast {
-        background: var(--soft_green_clr);
-        border: 1px solid var(--mid_green_clr);
-        box-shadow: 0 0 12px rgba(87, 255, 137, 0.233);
-
-        .ant-notification-notice-content {
-          .ant-notification-notice-with-icon {
-            .ant-notification-notice-icon {
-              color: var(--mid_green_clr);
-            }
-
-            .ant-notification-notice-message {
-              color: var(--mid_green_clr);
-            }
-          }
-        }
-      }
-
-      &.warning_toast {
-        background: var(--soft_yellow_clr);
-        border: 1px solid var(--mid_yellow_clr);
-        box-shadow: 0 0 12px rgba(255, 244, 87, 0.233);
-
-        .ant-notification-notice-content {
-          .ant-notification-notice-with-icon {
-            .ant-notification-notice-icon {
-              color: var(--mid_yellow_clr);
-            }
-
-            .ant-notification-notice-message {
-              color: var(--mid_yellow_clr);
-            }
-          }
-        }
-      }
-    }
-  }
+.alignCenter {
+  @include flexCenterAlignment
 }
 
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-// End:: Ant Design Components Global Styling
-
-.text-gray {
-  color: var(--light_gray_clr) !important;
-}
-
-.empty_items {
-  min-height: 300px;
-  @include flexCenterAlignment;
-
-  img {
-    width: 300px;
-  }
-
-  text-align: center;
-
-  h4 {
-    margin-top: 1rem;
-    // color: var(--main_theme_clr);
-  }
-}
-
-.back_home {
-  padding: 1rem;
-  background-color: var(--main_theme_clr);
-
-  color: white !important;
-
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 1rem;
-  border: 2px solid var(--main_theme_clr);
-  transition: all 0.3s;
-
-  &:hover {
-    background-color: white;
-    color: var(--main_theme_clr) !important;
-  }
-}
-
-.font-bold {
-  font-weight: bold;
-}
-
-.sec_padding {
-  padding-block: 2rem;
-}
-
-.sec_margin {
-  margin-block: 5rem;
-}
-
-// Start:: Dialogs Styles
-.v-dialog {
-  max-width: 500px;
-  @include borderRadius(8px);
-  background-color: var(--white_clr) !important;
-
-  .theme--light {
-    &.v-card {
-      padding: 25px;
-      background-color: var(--white_clr) !important;
-      @include flexCenterAlignment;
-      flex-direction: column;
-      @include borderRadius(8px);
-      box-shadow: none;
-
-      img {
-        object-fit: cover;
-      }
-
-      .dialog_desc_text {
-        text-align: center;
-        color: var(--theme_text_clr);
-        line-height: 2;
-        font-size: 18px;
-      }
-
-      .v-card__title {
-        padding-top: 0;
-        color: var(--theme_text_clr);
-        font-size: 22px !important;
-        font-family: $semi_bold_font !important;
-        text-align: center;
-        word-break: break-word;
-        line-height: 1.8;
-      }
-
-      .v-card__actions {
-        .modal_confirm_btn {
-          @include primaryBtnStyle;
-          font-size: 15px;
-          margin-inline: 8px;
-          background-color: transparent !important;
-          height: unset !important;
-          margin-top: 20px;
-          width: 130px;
-          &:disabled {
-            color: var(--white_clr) !important;
-          }
-        }
-
-        .modal_cancel_btn {
-          @include discardButtonStyle;
-          font-size: 15px;
-          margin-inline: 8px;
-          height: unset !important;
-          margin-top: 20px;
-          width: 130px;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 850px) {
-    max-width: 95%;
-    .theme--light {
-      &.v-card {
-        .v-card__actions {
-          .modal_confirm_btn,
-          .modal_cancel_btn {
-            min-width: 130px;
-          }
-        }
-      }
-    }
-  }
-}
-// End:: Dialogs Styles
-
-// Start:: Global Theme Classes
-.section_main_title {
-  margin-bottom: 1rem;
-  line-height: 1.8;
-  font-size: 2rem;
-  font-family: $semi_bold_font;
-  color: var(--black-clr);
-
-  &::selection {
-    background-color: var(--secondary_theme_clr);
-  }
-
-  @include media(md) {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  @include media(sm) {
-    font-size: 1.25rem;
-  }
-}
-
-.section_sub_title {
-  font-size: 1rem;
-  font-family: $regular_font;
-  color: rgba(15, 19, 18, 0.8);
-  margin-block-end: 2rem;
-
-  &::selection {
-    background-color: var(--secondary_theme_clr);
-  }
-
-  @include media(sm) {
-    font-size: .8rem;
-    text-align: center;
-  }
-}
 // End:: Global Theme Classes

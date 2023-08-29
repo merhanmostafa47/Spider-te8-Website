@@ -1,10 +1,9 @@
 <script setup>
-import { ref ,onUpdated} from 'vue'
-import TheNavbar from './components/navigation/TheNavbar.vue'
+// import { ref ,onUpdated} from 'vue'
 
-import { useLocaleStore } from './stores/localeStore';
-const locale = useLocaleStore();
-locale.getlocale();
+// import { useLocaleStore } from './stores/localeStore';
+// const locale = useLocaleStore();
+// locale.getlocale();
 
 // import { useLocale } from 'vuetify'
 // const { current } = useLocale()

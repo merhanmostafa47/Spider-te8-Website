@@ -1,21 +1,35 @@
-.navbar_wrapper{
+.navbar_wrapper {
   padding-block: 1rem;
+
+  .app-nav {
+    @include media(md) {
+      display: none
+    }
+  }
+
   .logo {
-      @include size(9rem, auto);
-      img {
-        max-inline-size: 100%;
-      }
+    @include size(9rem, auto);
+
+    img {
+      max-inline-size: 100%;
     }
 
-    .nav_list {
-      @include flex(center, center, row);
-      gap: 1.5rem;
+    &.filter_white {
+      filter:brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(147%) hue-rotate(168deg) brightness(106%) contrast(105%);
+    }
+  }
 
-      .nav_item{
-        .nav_link{
-          text-decoration: none;
-          @include font(500,1.25rem,$main_theme_clr);
-        }
+  .nav_list {
+    @include flex(center, center, row);
+    gap: 2rem;
+
+    .nav_item {
+      .nav_link {
+        text-decoration: none;
+        @include font(500, 1.15rem, $white_clr);
+        font-family: $medium_font;
+        text-transform: capitalize;
       }
     }
+  }
 }

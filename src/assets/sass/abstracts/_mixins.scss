@@ -70,310 +70,18 @@
   border-radius: $tl $tr $br $bl;
 }
 
-@mixin menuHoverEffect {
-  overflow: hidden;
-  margin: 0 10px;
-  position: relative;
-  font-size: 15px;
-
-  button,
-  a {
-    text-decoration: none;
-    color: var(--dark_gray_clr);
-    @include transitioning(0.2s);
-    font-family: $bold_font;
-
-    &.router-link-exact-active {
-      color: $secondary_theme_clr;
-    }
-  }
-
-  &:hover {
-
-    button,
-    a {
-      color: var(--secondary_theme_clr);
-    }
-  }
-}
-
-@mixin primaryBtnStyle {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  min-width: 160px;
-  text-align: center;
-  padding: 8px 20px;
-  font-size: 15px;
-  color: $white_clr;
-  border-radius: 5px;
-  border: 1px solid $main_theme_clr;
-  background-image: linear-gradient(90deg, transparent 50%, $main_theme_clr 50%);
-  background-position: 100%;
-  background-size: 400%;
-  @include transitioning(0.6s);
-
-  @include media(sm) {
-    font-size: .9rem;
-  }
-
-  .btn_loader {
-    position: absolute;
-    left: 10px;
-    top: 30%;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    border: 3px dotted $white_clr;
-    border-style: solid solid dotted dotted;
-    @include borderRadius(50%);
-    @include transitioning(0.4s);
-    display: inline-block;
-    animation: rotation 2s linear infinite;
-  }
-
-  &:hover {
-    background-position: 0;
-    color: $main_theme_clr;
-    border: 1px solid $main_theme_clr;
-    background-color: transparent;
-
-    .btn_loader {
-      border: 3px dotted $main_theme_clr;
-    }
-  }
-
-  &:disabled {
-    opacity: 0.5;
-  }
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
-@mixin discardButtonStyle {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  min-width: 160px;
-  text-align: center;
-  padding: 8px 20px;
-  font-size: 15px;
-  color: var(--white_clr);
-  border-radius: 5px;
-  border: 1px solid var(--deactive_button_clr);
-  background-image: linear-gradient(90deg, transparent 50%, var(--deactive_button_clr) 50%);
-  background-position: 100%;
-  background-size: 400%;
-  @include transitioning(0.6s);
-
-  @include media(sm) {
-    font-size: .9rem;
-  }
-
-  .btn_loader {
-    position: absolute;
-    left: 10px;
-    top: 30%;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    border: 3px dotted var(--white_clr);
-    border-style: solid solid dotted dotted;
-    @include borderRadius(50%);
-    @include transitioning(0.4s);
-    display: inline-block;
-    animation: rotation 2s linear infinite;
-  }
-
-  &:hover {
-    background-position: 0;
-    color: var(--deactive_button_clr);
-    border: 1px solid var(--deactive_button_clr);
-    background-color: transparent;
-
-    .btn_loader {
-      border: 3px dotted var(--deactive_button_clr);
-    }
-  }
-
-  &:disabled {
-    opacity: 0.5;
-  }
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
-@mixin secondaryBtnStyle {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  min-width: 130px;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: var(--white_clr);
-  border-radius: 10px;
-  border: 1px solid var(--secondary_theme_clr);
-  background-image: linear-gradient(90deg, transparent 50%, var(--secondary_theme_clr) 50%);
-  background-position: 100%;
-  background-size: 400%;
-  @include transitioning(0.6s);
-
-  @include media(sm) {
-    font-size: .9rem;
-  }
-
-  .btn_loader {
-    position: absolute;
-    left: 15px;
-    top: 30%;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    border: 3px dotted var(--white_clr);
-    border-style: solid solid dotted dotted;
-    @include borderRadius(50%);
-    @include transitioning(0.4s);
-    display: inline-block;
-    animation: rotation 2s linear infinite;
-  }
-
-  &:hover {
-    background-position: 0;
-    color: var(--secondary_theme_clr);
-    border: 1px solid var(--secondary_theme_clr);
-    background-color: transparent;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-  }
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
-@mixin borderedBtnStyle {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  min-width: 130px;
-  text-align: center;
-  padding: 8px 20px;
-  font-size: 16px;
-  color: var(--theme_text_clr);
-  border-radius: 5px;
-  border: 1px solid var(--border_clr);
-  @include transitioning(0.6s);
-
-  @include media(sm) {
-    font-size: .9rem;
-  }
-
-  .btn_loader {
-    position: absolute;
-    left: 15px;
-    top: 30%;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    border: 3px dotted var(--white_clr);
-    border-style: solid solid dotted dotted;
-    @include borderRadius(50%);
-    @include transitioning(0.4s);
-    display: inline-block;
-    animation: rotation 2s linear infinite;
-  }
-
-  &:hover {
-    color: var(--main_theme_clr);
-  }
-
-  &:disabled {
-    opacity: 0.5;
-  }
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
-@mixin softBtnStyle($s_bg) {
-  width: 40px;
-  height: 40px;
-  @include flexCenterAlignment;
-  background-color: $s_bg;
-  color: var(--main_theme_clr);
-  @include borderRadius(10px);
-
-  i,
-  svg {
-    font-size: 20px;
-  }
-}
-
-@mixin wishlistBtnStyle() {
-  width: 45px;
-  height: 45px;
-  border: 1px solid var(--main_theme_clr);
-  border-radius: 4px;
-  @include flexCenterAlignment;
-
-  i,
-  svg {
-    color: var(--main_theme_clr);
-    font-size: 22px;
-  }
-}
-
-@mixin mainTitleStyle {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: $bold_font;
-  color: var(--theme_text_clr);
-  text-transform: capitalize;
-}
-
 @mixin flexCenterAlignment {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 @mixin flexStartAlignment {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
+  flex-direction: column;
 }
 
 @mixin verticalFlexStartAlignment {
@@ -399,33 +107,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-
-@mixin textWrapper {
-  word-break: break-word;
-  word-spacing: 2px;
-  font-size: 15px;
-  color: var(--mid_gray_clr);
-  line-height: 1.8;
-  text-align: start;
-}
-
-@mixin textEllipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@mixin simpleShadow {
-  box-shadow:  0px 1px 64px 0px  var(--simple_shadow_clr);
-}
-
-@mixin midShadow {
-  box-shadow: 0px -4px 150px 0px var(--mid_shadow_clr);
-}
-
-@mixin heighShadow {
-  box-shadow: 0px 2px 150px 0px var(--heigh_shadow_clr);
 }
 
 // media queries
@@ -465,5 +146,42 @@
     @media (min-width:1200px) {
       @content;
     }
+  }
+}
+
+// ============= Buttons Style ===================
+@mixin mainBtn($bgColor) {
+  border-radius: 1rem;
+  block-size: 3rem;
+  min-inline-size: 9rem;
+  @include font(600, 1rem, $white_clr);
+  background-color: $bgColor;
+  transition: all .3s ease-in-out;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+
+  @include media(sm) {
+    font-size: .9rem;
+  }
+
+  @if $bgColor==$main_theme_clr {
+    background-color: $secondary_theme_clr;
+  }
+
+  @else if $bgColor ==$secondary_theme_clr {
+    &:hover {
+      color: $main_theme_clr;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 5px #fff, 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  @else {
+    @error "Unknown color #{$bgColor}."
   }
 }

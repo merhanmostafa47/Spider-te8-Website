@@ -30,6 +30,8 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "./src/assets/sass/main.scss";
+          @import "./src/assets/sass/abstracts/_variables.scss";
+          @import "./src/assets/sass/abstracts/_mixins.scss";
         `,
       },
     },
