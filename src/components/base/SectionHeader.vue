@@ -34,23 +34,31 @@ defineProps({
     activeColor: {
         type: String,
         required: false
+    },
+    descSize: {
+        type: String,
+        required: false
     }
 })
 
 </script>
 
 <style lang="scss" scoped>
+.section_header_wrapper {
+    margin-block-end: 4rem;
+}
+
 .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: $bold_font;
     margin-block-end: 2rem;
 
     @include media(md) {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
     }
 
     @include media(sm) {
-        font-size: 1.5rem;
+        font-size: 1.15rem;
     }
 }
 
@@ -58,7 +66,6 @@ defineProps({
     font-size: 1.75rem;
     font-family: $semi_bold_font;
     margin-block-end: 1.5rem;
-    color: v-bind(activeColor);
 
     @include media(md) {
         font-size: 1.5rem;
@@ -70,12 +77,12 @@ defineProps({
 }
 
 .description {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: $regular_font;
-    inline-size: 70%;
+    inline-size: v-bind(descSize);
 
     @include media(md) {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         inline-size: 100%;
     }
 

@@ -4,7 +4,7 @@
       <div class="app-nav">
         <v-row justify="space-between" align="center" class="m-0">
           <div class="logo filter_white">
-            <img src="../../assets/images/logo/logo.svg" alt="" />
+            <img src="@/assets/media/logo/logo.svg" alt="" />
           </div>
           <ul class="nav_list">
             <li class="nav_item" v-for="(item, i) in navList" :key="i">

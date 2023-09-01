@@ -11,8 +11,8 @@
   --mid_shadow_clr: rgba(1, 0, 168, 0.08);
   --heigh_shadow_clr: rgba(1, 0, 168, 0.08);
   --border_main_clr: rgba(1, 0, 168, 0.08);
-  
-  
+
+
   --theme_second_bg_clr: rgba(255, 102, 0, 20%);
   --form_content_bg_clr: #fff;
   --deactive_button_clr: #A8A8A8;
@@ -85,9 +85,11 @@
 
   // End:: Dark Theme Colors
 }
+
 $main_theme_clr: #25006C;
 $secondary_theme_clr: #FF3636;
 $theme_main_bg_clr: #25006C;
+$light_main_theme_clr: #3C06BC;
 $light_bg_clr: rgba(60, 6, 188, 0.06);
 $theme_text_clr: #000034;
 $theme_text_clr_50: rgba(0, 0, 52, 0.50);
@@ -95,7 +97,9 @@ $simple_shadow_clr: rgba(1, 0, 168, 0.08);
 $mid_shadow_clr: rgba(1, 0, 168, 0.08);
 $heigh_shadow_clr: rgba(1, 0, 168, 0.08);
 $border_main_clr: rgba(1, 0, 168, 0.08);
-$white_clr:#fff;
+$card_background_clr: #fff;
+$card_background_dark_clr: #3C06BC;
+$white_clr: #fff;
 
 
 // End:: Root Element
@@ -110,5 +114,5 @@ $mid_green_clr: #34bf6c;
 // End:: Fonts
 
 // Start:: General Varibles
-$section_block_padding: 90px;
+$section_block_padding: 100px;
 // End:: General Varibles

@@ -1,12 +1,12 @@
 <template>
     <div class="small_nav_wrapper">
         <v-row justify="space-between" align="center" class="mx-0">
-            <div class="logo">
-                <img src="@/assets/images/logo/logo.svg" alt="" />
+            <div class="logo filter_white">
+                <img src="@/assets/media/logo/logo.svg" alt="" />
             </div>
             <v-layout>
                 <v-navigation-drawer v-model="drawer" temporary class="bg-main-color " theme="dark">
-                    <v-img :width="300" src="~/assets/images/logo/logo.svg"></v-img>
+                    <v-img :width="300" src="@/assets/media/logo/logo.svg"></v-img>
 
                     <v-list density="compact" nav v-for="(item, i) in navList" :key="i">
                         <v-list-item :prepend-icon="`mdi-${item.icon}`" :title="item.title" :to="item.to"></v-list-item>
