@@ -7,10 +7,10 @@ const app = createApp(App)
 import router from './router'
 import vuetify from './plugins/vuetify'
 import i18n from './plugins/i18n'
-import { Swiper, SwiperSlide } from './plugins/swiper';
-import Particles from "particles.vue3";
-import { Icon } from '@iconify/vue';
+import Particles from 'particles.vue3'
+
 import { createPinia } from 'pinia'
+import { registerGlobalComponents } from './helpers/globalComponents'
 
 app.use(router)
 app.use(vuetify)
@@ -19,19 +19,6 @@ app.use(Particles)
 app.use(createPinia())
 
 //Components
-app.component('Icon', Icon)
-app.component('Swiper', Swiper);
-app.component('SwiperSlide', SwiperSlide);
+registerGlobalComponents(app)
 
-import TheNavbar from './components/navigation/TheNavbar.vue'
-import smallNavigationBar from './components/navigation/smallNavigationBar/NavigationBar.vue'
-
-app.component('TheNavbar', TheNavbar)
-app.component('smallNavigationBar', smallNavigationBar)
-
-app.component('SectionHeader', SectionHeader)
-app.component('BaseButton', BaseButton)
-
-import SectionHeader from './components/base/SectionHeader.vue';
-import BaseButton from './components/base/BaseButton.vue'
 app.mount('#app')

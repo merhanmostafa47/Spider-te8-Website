@@ -8,7 +8,6 @@
 </template>
 
 <script setup>
-import SectionHeader from '../base/SectionHeader.vue'
 import ServicesCarousel from '../carousels/ServicesCarousel.vue'
 
 defineProps({
