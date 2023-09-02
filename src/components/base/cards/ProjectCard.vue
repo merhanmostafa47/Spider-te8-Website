@@ -10,6 +10,7 @@
       <p class="card_copy">
         {{ cardData.description }}
       </p>
+      <BaseButton :title="'تحميل التطبيق'" :link="cardData.link" :btnType="'primaryBtn'" />
     </div>
   </div>
 </template>
@@ -33,6 +34,7 @@ defineProps({
 
   .card_image {
     @include size(100%, 100%);
+
     img {
       @include size(100%, 100%);
       object-fit: cover;
@@ -48,29 +50,37 @@ defineProps({
     inset-block-start: 0;
     transition: all 0.5s ease-in-out;
   }
+
   &::before {
     content: '';
     background-color: rgba(38, 0, 108, 0.7);
     // mix-blend-mode: multiply;
     border-radius: 1rem;
   }
+
   .card_overlay {
     @include flexCenterAlignment;
 
     .card_title {
-      @include font(700, 1.75rem, $white_clr);
+      @include font(700, 1.5rem, $white_clr);
       text-transform: uppercase;
-      margin-block-end: 1rem;
+      margin-block-end: .5rem;
     }
+
     .card_copy {
-      @include font(400, 1.25rem, $white_clr);
+      @include font(400, 1rem, $white_clr);
       text-align: center;
       margin-block-end: 1.5rem;
       inline-size: 75%;
     }
+
+    .primaryBtn {
+      font-size: .9rem;
+    }
   }
 
   &:hover {
+
     &::before,
     .card_overlay {
       @include size(100%, 100%);
@@ -78,5 +88,4 @@ defineProps({
       inset: 0;
     }
   }
-}
-</style>
+}</style>

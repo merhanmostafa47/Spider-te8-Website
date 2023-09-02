@@ -120,12 +120,46 @@ const homeReadyProjects = {
       title: 'App Name',
       description:
         'سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق',
+      link: 'https://google.com'
     },
     {
       image: '../src/assets/media/images/project-03.png',
       title: 'App Name',
       description:
         'سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق',
+      link: 'https://google.com'
+    },
+  ],
+}
+
+const specialSections = {
+  subtitle: 'القطاعات التى تم العمل بها',
+  title: 'هل لديك قطاع خاص؟',
+  description: 'تواصل معنا في حالة إذا كنت تعمل فى قطاع ما وترغب في ابتكار حل يساعدك علي مواكبة التحول الرقمي وبناء أفضل الأنظمة الذكية.',
+  sections: [
+    {
+      image: '../src/assets/media/images/sections/img_1.svg',
+      title: 'القطاع العقاري',
+    },
+    {
+      image: '../src/assets/media/images/sections/img_2.svg',
+      title: 'القطاع التعليمي',
+    },
+    {
+      image: '../src/assets/media/images/sections/img_3.svg',
+      title: 'القطاع الطبي',
+    },
+    {
+      image: '../src/assets/media/images/sections/img_4.svg',
+      title: 'قطاع التسويق',
+    },
+    {
+      image: '../src/assets/media/images/sections/img_5.svg',
+      title: 'القطاع الاستثماري',
+    },
+    {
+      image: '../src/assets/media/images/sections/img_6.svg',
+      title: 'القطاع التجاري',
     },
   ],
 }
@@ -139,6 +173,7 @@ const allData = {
   homeStatistics,
   homeFeatures,
   homeReadyProjects,
+  specialSections
   // End::Home page
 }
 

@@ -68,26 +68,26 @@ defineProps({
     margin-block-end: 1rem;
 
     @include media(md) {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     @include media(sm) {
-        font-size: 1.25rem;
+        font-size: .8em;
     }
 }
 
 .description {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-family: $regular_font;
     inline-size: v-bind(descSize);
 
     @include media(md) {
-        font-size: 1.15rem;
+        font-size: 1rem;
         inline-size: 100%;
     }
 
     @include media(sm) {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }
 </style>

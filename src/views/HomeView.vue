@@ -5,7 +5,8 @@
     <AboutSection :sectionContent="homeAbout" />
     <StatisticsSection :section-content="homeStatistics" />
     <FeaturesSection :sectionContent="homeFeatures" />
-    <ReadyProjects :section-content="homeReadyProjects"/>
+    <ReadyProjects :section-content="homeReadyProjects" />
+    <SpecialSections :section-content="specialSections" />
   </main>
 </template>
 
@@ -17,14 +18,8 @@ import AboutSection from '../components/generalSections/AboutSection.vue';
 import StatisticsSection from '../components/generalSections/StatisticsSection.vue';
 import FeaturesSection from '../components/generalSections/FeaturesSection.vue';
 import ReadyProjects from '../components/generalSections/ReadyProjects.vue';
+import SpecialSections from '../components/generalSections/SpecialSections.vue';
 
 import allData from '../helpers/dummyData'
-const { homeAbout, homeHero, homeServices, homeStatistics,homeFeatures,homeReadyProjects } = allData
-
-
-const projectData = reactive({
-  title: "Sallon app",
-  description: "سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق",
-  image: "../src/assets/media/images/project_1.png",
-})
+const { homeAbout, homeHero, homeServices, homeStatistics, homeFeatures, homeReadyProjects, specialSections } = allData
 </script>
