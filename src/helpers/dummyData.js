@@ -108,8 +108,27 @@ const homeFeatures = [
     title: 'عقد مسجل',
     description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم ',
     image: '../src/assets/media/icons/feature_icon.svg',
-  }
+  },
 ]
+
+const homeReadyProjects = {
+  subtitle: 'المشاريع الجاهزة',
+  title: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
+  projects: [
+    {
+      image: '../src/assets/media/images/project-02.png',
+      title: 'App Name',
+      description:
+        'سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق',
+    },
+    {
+      image: '../src/assets/media/images/project-03.png',
+      title: 'App Name',
+      description:
+        'سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق',
+    },
+  ],
+}
 // End::Home page
 
 const allData = {
@@ -118,7 +137,8 @@ const allData = {
   homeServices,
   homeAbout,
   homeStatistics,
-  homeFeatures
+  homeFeatures,
+  homeReadyProjects,
   // End::Home page
 }
 

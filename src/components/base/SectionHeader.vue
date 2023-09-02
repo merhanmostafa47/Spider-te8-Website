@@ -45,7 +45,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .section_header_wrapper {
-    margin-block-end: 4rem;
+    margin-block-end: 3rem;
 }
 
 .title {
@@ -63,9 +63,9 @@ defineProps({
 }
 
 .subtitle {
-    font-size: 1.75rem;
+    font-size: 1.15rem;
     font-family: $semi_bold_font;
-    margin-block-end: 1.5rem;
+    margin-block-end: 1rem;
 
     @include media(md) {
         font-size: 1.5rem;

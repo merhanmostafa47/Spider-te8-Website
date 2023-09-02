@@ -27,3 +27,9 @@ defineProps({
     }
 })
 </script>
+
+<style lang="scss" scoped>
+.primaryBtn {
+    inline-size: fit-content;
+}
+</style> 

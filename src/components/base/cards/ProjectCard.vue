@@ -27,8 +27,7 @@ defineProps({
 .project_card_wrapper {
   border-radius: 1rem;
   overflow: hidden;
-  block-size: 38rem;
-  inline-size: 38rem;
+  block-size: 25rem;
   position: relative;
   transition: all 0.5s ease-in-out;
 
@@ -51,8 +50,8 @@ defineProps({
   }
   &::before {
     content: '';
-    background-color: rgba(61, 6, 188, 0.7);
-    mix-blend-mode: multiply;
+    background-color: rgba(38, 0, 108, 0.7);
+    // mix-blend-mode: multiply;
     border-radius: 1rem;
   }
   .card_overlay {

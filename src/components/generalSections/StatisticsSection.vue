@@ -37,7 +37,7 @@ defineProps({
 }
 
 .custom_row {
-  transform: translateY(-75%);
+  transform: translateY(-60%);
   border-radius: 1rem;
   @include heavyShadow;
   padding: 1rem 2rem;
