@@ -56,6 +56,33 @@ const homeAbout = {
   description:
     'سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق سبايدر-تك نعمل معك على فهم احتياجاتك لتقديم حلول مبتكرة مُقدَمة من فريق عمل بارع، و مُجهزة بأحدث الأدوات والتقنيات الحالية التي تستطيع أن تحاكي وتواكب التحديات التقنية في المستقبل. في سبايدر-تك نؤكد دائما على جودة الخِدْمَات المقدمة وتسليمها في الوقت المرجو بالإضافة إلى إرضاء العملاء بشكل كامل وذلك بفحص ',
 }
+
+const homeStatistics = [
+  {
+    id: 1,
+    image: '../src/assets/media/images/state_1.svg',
+    title: '50',
+    description: 'عملاء سعداء',
+  },
+  {
+    id: 2,
+    image: '../src/assets/media/images/state_2.svg',
+    title: '20',
+    description: 'مشاريع منتهية',
+  },
+  {
+    id: 3,
+    image: '../src/assets/media/images/state_3.svg',
+    title: '50',
+    description: 'منتجات ',
+  },
+  {
+    id: 4,
+    image: '../src/assets/media/images/state_4.svg',
+    title: '10',
+    description: 'موظفين',
+  },
+]
 // End::Home page
 
 const allData = {
@@ -63,6 +90,7 @@ const allData = {
   homeHero,
   homeServices,
   homeAbout,
+  homeStatistics,
   // End::Home page
 }
 

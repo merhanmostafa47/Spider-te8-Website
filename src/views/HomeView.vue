@@ -3,6 +3,7 @@
     <heroSection :sectionContent="homeHero" />
     <ServicesSection :sectionContent="homeServices" />
     <AboutSection :sectionContent="homeAbout" />
+    <StatisticsSection :section-content="homeStatistics" />
   </main>
 </template>
 
@@ -11,9 +12,10 @@ import { reactive } from 'vue';
 import heroSection from '../components/generalSections/heroSection.vue';
 import ServicesSection from '../components/generalSections/ServicesSection.vue';
 import AboutSection from '../components/generalSections/AboutSection.vue';
+import StatisticsSection from '../components/generalSections/StatisticsSection.vue';
 
 import allData from '../helpers/dummyData'
-const { homeAbout, homeHero, homeServices } = allData
+const { homeAbout, homeHero, homeServices, homeStatistics } = allData
 
 
 const projectData = reactive({
