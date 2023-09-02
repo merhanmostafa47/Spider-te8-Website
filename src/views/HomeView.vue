@@ -4,6 +4,7 @@
     <ServicesSection :sectionContent="homeServices" />
     <AboutSection :sectionContent="homeAbout" />
     <StatisticsSection :section-content="homeStatistics" />
+    <FeaturesSection :sectionContent="homeFeatures" />
   </main>
 </template>
 
@@ -15,7 +16,9 @@ import AboutSection from '../components/generalSections/AboutSection.vue';
 import StatisticsSection from '../components/generalSections/StatisticsSection.vue';
 
 import allData from '../helpers/dummyData'
-const { homeAbout, homeHero, homeServices, homeStatistics } = allData
+import FeatureCard from '../components/base/cards/FeatureCard.vue';
+import FeaturesSection from '../components/generalSections/FeaturesSection.vue';
+const { homeAbout, homeHero, homeServices, homeStatistics,homeFeatures } = allData
 
 
 const projectData = reactive({

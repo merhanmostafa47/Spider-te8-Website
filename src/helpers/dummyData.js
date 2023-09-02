@@ -83,6 +83,33 @@ const homeStatistics = [
     description: 'موظفين',
   },
 ]
+
+const homeFeatures = [
+  {
+    id: 1,
+    title: 'حماية قوية',
+    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم ',
+    image: '../src/assets/media/icons/feature_icon.svg',
+  },
+  {
+    id: 2,
+    title: 'دعم فني 24/7 ',
+    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم ',
+    image: '../src/assets/media/icons/feature_icon.svg',
+  },
+  {
+    id: 3,
+    title: 'حلول مبتكرة',
+    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم ',
+    image: '../src/assets/media/icons/feature_icon.svg',
+  },
+  {
+    id: 4,
+    title: 'عقد مسجل',
+    description: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم ',
+    image: '../src/assets/media/icons/feature_icon.svg',
+  }
+]
 // End::Home page
 
 const allData = {
@@ -91,6 +118,7 @@ const allData = {
   homeServices,
   homeAbout,
   homeStatistics,
+  homeFeatures
   // End::Home page
 }
 

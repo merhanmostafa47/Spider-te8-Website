@@ -29,7 +29,7 @@ defineProps({
     },
     alignment: { //alignStart || alignCenter
         type: String,
-        required: true
+        required: false
     },
     activeColor: {
         type: String,

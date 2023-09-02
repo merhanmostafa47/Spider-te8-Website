@@ -170,11 +170,12 @@
 @mixin heavyShadow {
   box-shadow: 0px 2px 150px 0px rgba(1, 0, 168, 0.08);
 }
+
 // ============= Buttons Style ===================
 @mixin mainBtn($bgColor) {
   border-radius: 1rem;
   block-size: 3rem;
-  min-inline-size: 9rem;
+  min-inline-size: 8rem;
   @include font(600, 1rem, $white_clr);
   background-color: $bgColor;
   transition: all .3s ease-in-out;
@@ -191,7 +192,9 @@
   }
 
   @if $bgColor==$main_theme_clr {
-    background-color: $secondary_theme_clr;
+    &:hover {
+      background-color: $secondary_theme_clr;
+    }
   }
 
   @else if $bgColor ==$secondary_theme_clr {
