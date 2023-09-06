@@ -111,31 +111,53 @@ const homeFeatures = [
   },
 ]
 
-const homeReadyProjects = {
+const projects = {
   subtitle: 'المشاريع الجاهزة',
   title: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
   projects: [
     {
+      category: 'app',
       image: '../src/assets/media/images/project-02.png',
       title: 'App Name',
       description:
         'سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق',
-      link: 'https://google.com'
+      link: 'https://www.google.com',
     },
     {
+      category: 'IOSApp',
       image: '../src/assets/media/images/project-03.png',
       title: 'App Name',
       description:
         'سبايدر-تك هي شركة ناشئة في مجال تطوير البرمجيات تُمكن مؤسستك من إكتساب مِيزة تنافسية في سوق العمل عن طريق الخِدْمَات التي تقدمها وتدعم بها أعمالك. كفريق',
-      link: 'https://google.com'
+      link: 'https://www.google.com',
     },
   ],
 }
 
+const projectsTabs = [
+  {
+    id: '1',
+    title: 'website',
+  },
+  {
+    id: '2',
+    title: 'AndroidApp',
+  },
+  {
+    id: '3',
+    title: 'IOSApp',
+  },
+  {
+    id: '4',
+    title: 'designs',
+  },
+]
+
 const specialSections = {
   subtitle: 'القطاعات التى تم العمل بها',
   title: 'هل لديك قطاع خاص؟',
-  description: 'تواصل معنا في حالة إذا كنت تعمل فى قطاع ما وترغب في ابتكار حل يساعدك علي مواكبة التحول الرقمي وبناء أفضل الأنظمة الذكية.',
+  description:
+    'تواصل معنا في حالة إذا كنت تعمل فى قطاع ما وترغب في ابتكار حل يساعدك علي مواكبة التحول الرقمي وبناء أفضل الأنظمة الذكية.',
   sections: [
     {
       image: '../src/assets/media/images/sections/img_1.svg',
@@ -172,8 +194,9 @@ const allData = {
   homeAbout,
   homeStatistics,
   homeFeatures,
-  homeReadyProjects,
-  specialSections
+  projects,
+  projectsTabs,
+  specialSections,
   // End::Home page
 }
 

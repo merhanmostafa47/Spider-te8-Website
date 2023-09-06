@@ -27,7 +27,7 @@ defineProps({
     background-color: $card_background_dark_clr;
     border-radius: 1.875rem;
     @include flexStartAlignment;
-    min-block-size: 18rem;
+    min-block-size: 16rem;
     text-transform: capitalize;
 
     .card_image {

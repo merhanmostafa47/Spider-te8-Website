@@ -10,7 +10,7 @@ import i18n from './plugins/i18n'
 import Particles from 'particles.vue3'
 
 import { createPinia } from 'pinia'
-import { registerGlobalComponents } from './helpers/globalComponents'
+import { globalComponents } from './helpers/globalComponents'
 
 app.use(router)
 app.use(vuetify)
@@ -19,6 +19,6 @@ app.use(Particles)
 app.use(createPinia())
 
 //Components
-registerGlobalComponents(app)
+globalComponents(app)
 
 app.mount('#app')

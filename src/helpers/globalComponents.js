@@ -6,13 +6,13 @@ import smallNavigationBar from '../components/navigation/smallNavigationBar/Navi
 import SectionHeader from '../components/base/SectionHeader.vue'
 import BaseButton from '../components/base/BaseButton.vue'
 
-export function registerGlobalComponents(app) {
-    app.component('Swiper', Swiper)
-    app.component('SwiperSlide', SwiperSlide)
-    app.component('Icon', Icon)
+export function globalComponents(app) {
+  app.component('Swiper', Swiper)
+  app.component('SwiperSlide', SwiperSlide)
+  app.component('Icon', Icon)
 
-    app.component('TheNavbar', TheNavbar)
-    app.component('smallNavigationBar', smallNavigationBar)
-    app.component('SectionHeader', SectionHeader)
-    app.component('BaseButton', BaseButton)
+  app.component('TheNavbar', TheNavbar)
+  app.component('smallNavigationBar', smallNavigationBar)
+  app.component('SectionHeader', SectionHeader)
+  app.component('BaseButton', BaseButton)
 }

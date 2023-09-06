@@ -57,6 +57,7 @@ const routes = [
   {
     path: '/projects',
     name: 'ProjectsPage',
+    props: (route) => ({ category: route.query.category }),
     component: () => import('../views/AboutView.vue'),
     meta: {
       title: 'Projects Page | spider-te8',
