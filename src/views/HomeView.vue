@@ -8,6 +8,7 @@
     <FeaturesSection :sectionContent="homeFeatures" />
     <ReadyProjects :section-content="projects" />
     <SpecialSections :section-content="specialSections" />
+    <BlogsSection :sectionContent="blogs" />
   </main>
 </template>
 
@@ -20,7 +21,8 @@ import FeaturesSection from '../components/generalSections/FeaturesSection.vue';
 import ReadyProjects from '../components/generalSections/ReadyProjects.vue';
 import SpecialSections from '../components/generalSections/SpecialSections.vue';
 import ProjectsSection from '../components/generalSections/ProjectsSection.vue';
+import BlogsSection from '../components/generalSections/BlogsSection.vue';
 
 import allData from '../helpers/dummyData'
-const { homeAbout, homeHero, homeServices, homeStatistics, homeFeatures, projects, projectsTabs, specialSections } = allData
+const { homeAbout, homeHero, homeServices, homeStatistics, homeFeatures, projects, projectsTabs, specialSections,blogs } = allData
 </script>

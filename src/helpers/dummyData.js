@@ -185,6 +185,53 @@ const specialSections = {
     },
   ],
 }
+
+const blogs = [
+  {
+    id: '1',
+    image: '../src/assets/media/images/project-04.png',
+    type: 'سابقة الاعمال',
+    title: 'تطوير المواقع وتطبيقات الهاتفتطوير المواقع وتطبيقات الهاتف',
+    description:
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص مننفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث',
+    author_image: '../src/assets/media/logo/small_logo.svg',
+    author_title: 'نشر بواسطة سبايدر-تك',
+    post_date: 'jaun 31, 2023',
+  },
+  {
+    id: '2',
+    image: '../src/assets/media/images/project-05.png',
+    type: 'سابقة الاعمال',
+    title: 'تطوير المواقع وتطبيقات الهاتفتطوير المواقع وتطبيقات الهاتف',
+    description:
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص مننفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث',
+    author_image: '../src/assets/media/logo/small_logo.svg',
+    author_title: 'نشر بواسطة سبايدر-تك',
+    post_date: 'jaun 31, 2023',
+  },
+  {
+    id: '3',
+    image: '../src/assets/media/images/project-03.png',
+    type: 'سابقة الاعمال',
+    title: 'تطوير المواقع وتطبيقات الهاتفتطوير المواقع وتطبيقات الهاتف',
+    description:
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص مننفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث',
+    author_image: '../src/assets/media/logo/small_logo.svg',
+    author_title: 'نشر بواسطة سبايدر-تك',
+    post_date: 'jaun 31, 2023',
+  },
+  {
+    id: '4',
+    image: '../src/assets/media/images/project-02.png',
+    type: 'سابقة الاعمال',
+    title: 'تطوير المواقع وتطبيقات الهاتفتطوير المواقع وتطبيقات الهاتف',
+    description:
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص مننفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث',
+    author_image: '../src/assets/media/logo/small_logo.svg',
+    author_title: 'نشر بواسطة سبايدر-تك',
+    post_date: 'jaun 31, 2023',
+  },
+]
 // End::Home page
 
 const allData = {
@@ -197,6 +244,7 @@ const allData = {
   projects,
   projectsTabs,
   specialSections,
+  blogs,
   // End::Home page
 }
 

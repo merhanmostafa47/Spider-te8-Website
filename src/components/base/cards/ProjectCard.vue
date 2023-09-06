@@ -10,7 +10,11 @@
       <p class="card_copy">
         {{ cardData.description }}
       </p>
-      <BaseButton :title="'تحميل التطبيق'" :link="cardData.link" :btnType="'primaryBtn'" />
+      <BaseButton
+        :title="'تحميل التطبيق'"
+        :link="cardData.link"
+        :btnType="'primaryBtn'"
+      />
     </div>
   </div>
 </template>
@@ -31,7 +35,10 @@ defineProps({
   block-size: 25rem;
   position: relative;
   transition: all 0.5s ease-in-out;
-
+  
+  @include media(sm) {
+    block-size: 20rem;
+  }
   .card_image {
     @include size(100%, 100%);
 
@@ -64,7 +71,7 @@ defineProps({
     .card_title {
       @include font(700, 1.5rem, $white_clr);
       text-transform: uppercase;
-      margin-block-end: .5rem;
+      margin-block-end: 0.5rem;
     }
 
     .card_copy {
@@ -75,12 +82,11 @@ defineProps({
     }
 
     .primaryBtn {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
 
   &:hover {
-
     &::before,
     .card_overlay {
       @include size(100%, 100%);
@@ -88,4 +94,5 @@ defineProps({
       inset: 0;
     }
   }
-}</style>
+}
+</style>

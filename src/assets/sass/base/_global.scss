@@ -54,7 +54,8 @@ p {
 }
 
 .alignCenter {
-  @include flexCenterAlignment
+  @include flexCenterAlignment;
+  text-align: center;
 }
 
 // End:: Global Theme Classes
