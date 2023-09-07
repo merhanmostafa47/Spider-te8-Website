@@ -22,7 +22,7 @@
 defineProps({
   title: {
     type: String,
-    required: true,
+    required: false,
   },
   description: {
     type: String,
@@ -50,11 +50,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .section_header_wrapper {
-  margin-block-end: 3rem;
-
-  @include media(md) {
-    margin-block-end: 1rem;
-  }
+  margin-block-end: 1rem;
 }
 
 .title {

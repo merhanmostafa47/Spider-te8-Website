@@ -232,6 +232,44 @@ const blogs = [
     post_date: 'jaun 31, 2023',
   },
 ]
+
+const partners = [
+  {
+    id: '1',
+    title: 'ريفين',
+    image: '../src/assets/media/images/partner.png',
+  },
+  {
+    id: '2',
+    title: 'ريفين',
+    image: '../src/assets/media/images/partner.png',
+  },
+  {
+    id: '3',
+    title: 'ريفين',
+    image: '../src/assets/media/images/partner.png',
+  },
+  {
+    id: '4',
+    title: 'ريفين',
+    image: '../src/assets/media/images/partner.png',
+  },
+  {
+    id: '5',
+    title: 'ريفين',
+    image: '../src/assets/media/images/partner.png',
+  },
+  {
+    id: '6',
+    title: 'ريفين',
+    image: '../src/assets/media/images/partner.png',
+  },
+  {
+    id: '7',
+    title: 'ريفين',
+    image: '../src/assets/media/images/partner.png',
+  },
+]
 // End::Home page
 
 const allData = {
@@ -245,6 +283,7 @@ const allData = {
   projectsTabs,
   specialSections,
   blogs,
+  partners,
   // End::Home page
 }
 
